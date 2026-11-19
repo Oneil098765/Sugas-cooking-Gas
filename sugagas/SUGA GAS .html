@@ -1,0 +1,467 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suga's GAS | Gas Delivery</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+	/* Make website fit all screen sizes */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Phone screen adjustments */
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 15px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-image img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .about,
+    .contact {
+        padding: 30px 15px;
+        text-align: center;
+    }
+
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-buttons .btn {
+        width: 90%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px 10px;
+    }
+}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: #ff7b00;
+        }
+
+        .logo span {
+            color: white;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #ff7b00;
+        }
+
+        .hero {
+            min-height: 85vh;
+            background: linear-gradient(120deg, #111, #3b1b00);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 8%;
+            color: white;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .hero-text {
+            max-width: 550px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #ff7b00;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            color: #ddd;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            background: #ff7b00;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #e56800;
+            transform: translateY(-3px);
+        }
+
+        .hero-image img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #ff7b00;
+    box-shadow: 0 0 20px rgba(255, 123, 0, 0.5);
+}
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 45px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+        }
+
+        .card .icon {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            color: #e66e00;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .about {
+            background: #111;
+            color: white;
+            text-align: center;
+        }
+
+        .about p {
+            max-width: 750px;
+            margin: 20px auto;
+            line-height: 1.8;
+            color: #ddd;
+        }
+
+        .contact {
+            text-align: center;
+            background: #fff;
+        }
+
+        .contact p {
+            margin: 15px 0;
+            font-size: 17px;
+        }
+
+        .whatsapp {
+            background: #25D366;
+            margin-top: 15px;
+        }
+
+        .whatsapp:hover {
+            background: #1db954;
+        }
+
+        footer {
+            background: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer strong {
+            color: #ff7b00;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+
+            .hero {
+                text-align: center;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero-image {
+                font-size: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">Suga's <span>GAS</span></div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Your Gas.<br><span>Delivered.</span></h1>
+
+            <p>
+                Welcome to Suga's GAS — your reliable source for LPG gas
+                and convenient gas delivery. We bring the heat right to your door!
+            </p>
+
+            <a href="#contact" class="btn">Order Your Gas</a>
+        </div>
+
+        <div class="hero-image">
+            <img src="gaslogo.jpeg" alt="">
+			<style> .call {
+    background: #222;
+    margin-left: 10px;
+}
+
+.call:hover {
+    background: #444;
+}
+
+.whatsapp {
+    background: #25D366;
+}
+
+.whatsapp:hover {
+    background: #1db954;
+}
+</style>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">
+            Convenient gas solutions to keep your home running.
+        </p>
+
+        <div class="services">
+		
+             <div class="card">
+                <div class="icon">💰</div>
+                <h3>Price List </h3>
+                <p>25 pound gas: $4,000<br>
+			    <br>30 pound gas :$5,000<br>
+				<br>100 pound gas:$15,000<br>
+				</p>
+            </div>
+            <div class="card">
+                <div class="icon">🛢️</div>
+                <h3>Gas Refills</h3>
+                <p>Refill your LPG cylinder when you need gas for your home or business.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🚚</div>
+                <h3>Gas Delivery</h3>
+                <p>Enjoy the convenience of getting your gas delivered to your location.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🏠</div>
+                <h3>Home & Business</h3>
+                <p>Gas solutions for households, restaurants, shops and other businesses.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🔥</div>
+                <h3>Reliable Service</h3>
+                <p>We aim to provide friendly service and a convenient experience every time.</p>
+            </div>
+			 
+
+
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <h2 class="section-title">About Suga's GAS</h2>
+
+        <p>
+            At Sugas GAS, we believe getting gas should be simple and convenient.
+            Our goal is to provide dependable LPG gas services and make it easier
+            for customers to get what they need without the hassle.
+        </p>
+
+        <p>
+            Whether you're cooking at home or running a business,
+            Sugas GAS is ready to serve you.
+        </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Contact Suga's GAS</h2>
+
+        <p>Need a refill or delivery? Contact us today!</p>
+
+        <p><strong>Phone:</strong> FLOW:1(876)-700-7148 OR DIGICEL: 1(876)-487-7845</p>
+        <p><strong>Location:</strong> TRELAWNY</p>
+        <p><strong>Opening Hours:</strong> 24/7</p>
+        <!-- WhatsApp Button -->
+<a class="btn whatsapp"
+   href="https://wa.me/18767007148?text=Hi%20Sugas%20GAS%2C%20I%20would%20like%20to%20order%20gas."
+   target="_blank">
+    Order on WhatsApp(FLOW)
+</a>
+
+<!-- Direct Call Button -->
+<a class="btn calL"
+   href="tel:+18767007148">
+    Call Straight(FLOW)
+</a>
+<!-- WhatsApp Button -->
+<a class="btn whatsapp"
+   href="https://wa.me/18764877845?text=Hi%20Sugas%20GAS%2C%20I%20would%20like%20to%20order%20gas."
+   target="_blank">
+    Order on WhatsApp(DIGICEL)
+</a>
+
+<!-- Direct Call Button -->
+<a class="btn call"
+   href="tel:+18764877845">
+    Call Straight (DIGICEL)
+</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 <strong>Sugas GAS</strong>. All Rights Reserved.</p>
+        <p>Bringing the heat to your home 🔥</p>
+    </footer>
+
+</body>
+</html>
